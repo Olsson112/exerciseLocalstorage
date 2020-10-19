@@ -28,8 +28,19 @@ button {
     margin-top: 15px;
 }
 
+#logOutBtn {
+    margin-bottom: 15px;
+}
+
 .logInForm {
     display: flex;
     flex-direction: column;
     max-width: 200px;
+}
+
+.logOutAndAddTodo {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
 }

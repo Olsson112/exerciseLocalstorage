@@ -4,8 +4,15 @@ document.getElementById('loginButton').addEventListener("click", login)
 const username = "victor"
 const password = "123abc"
 
+
 function initSite() {
     console.log("Sidan är laddad")
+
+    const loggedInUser = sessionStorage.getItem("loggedInUser")
+
+    if(loggedInUser) {
+        window.location = "/loginpage.html"
+    }
 }
 
 function login() {
@@ -14,8 +21,8 @@ function login() {
 
     if(usernameToCheck == username && passwordToCheck == password) {
         // LOGGA IN
-        console.log("LOGGA IN")
         sessionStorage.setItem("loggedInUser", usernameToCheck)
+        window.location = "/loginpage.html"
     } else {
         // FEL UPPGIFTER
         let feedbackContainer = document.getElementById("loginFeedback")
